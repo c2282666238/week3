@@ -1,0 +1,63 @@
+package test;
+
+import java.util.Scanner;
+
+public class test {
+	public static int firstNum=0, secondNum=0;
+	public static void main(String[] a) {
+		while(true){
+		a();
+		b();
+		c();
+		d();
+		e();
+	}
+	}
+
+	public static void a() {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("\n输入第一个数:");
+		firstNum = scan.nextInt();
+		System.out.println("输入第二个数:");
+		secondNum = scan.nextInt();
+		while(firstNum>secondNum){
+			System.out.println("输入错误，请重新输入");
+			System.out.println("输入第一个数:");
+			firstNum = scan.nextInt();
+			System.out.println("输入第二个数:");
+			secondNum = scan.nextInt();
+		}
+	}
+	public static void b() {
+		for (int i = firstNum; i < secondNum; i++) {
+			if (i % 2 != 0) {
+				System.out.print(i+" ");
+			}
+		}
+	}
+
+	public static void c() {
+		int sum = 0;
+		for (int i = firstNum; i < secondNum; i++) {
+			if (i % 2 == 0) {
+				sum = sum + i;
+			}
+		}
+		System.out.println("\n它们之间所有的偶数和是"+sum);
+	}
+
+	public static void d() {
+		for (int i = 1; i <= 10; i++) {
+			System.out.println(i + "的平方是:" + (i * i));
+		}
+	}
+
+	public static void e() {
+		System.out.println("它们之间所有的基数的平方是");
+		for (int i = firstNum; i < secondNum; i++) {
+			if (i % 2 != 0) {
+				System.out.print(i * i+" ");
+			}
+		}
+	}
+}
